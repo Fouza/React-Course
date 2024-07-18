@@ -8,9 +8,9 @@ function App() {
   const x = "Any text"
   return (
     <div>
-      {/* <TextComp title="Welcome Page" bgcolor="red" textColor="#000" />*/}
-      <TextComp title="Settings Page" bgcolor="#4f556f" textColor="#FFF" />
-      {/* <InputComp pHolder="Welcome placeholder" initialValue="TEST" /> */}
+      {/* <TextComp title="Welcome Page" bgcolor="red" textColor="#000" /> */}
+      {/* <TextComp title="Settings Page" bgcolor="#4f556f" textColor="#FFF" /> */}
+      <InputComp pHolder="Welcome placeholder" initialValue="TEST" />
       <AnotherComp />
     </div>
   );

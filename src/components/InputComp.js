@@ -20,24 +20,38 @@ export const TestComp = () => {
 
 const InputComp = (props) => {
 
-
-
     const { pHolder, initialValue } = props
 
     const [value, setValue] = useState(initialValue)
+    const [xValue, setXValue] = useState(0)
 
     const changeHandler = (event) => {
         setValue(event.target.value)
     }
-    console.log(value)
 
-    // const secondChangeHandler = (e) => {
-    //     setValue(e.target.value)
-    // }
+    const handleXChange = (e) => {
+        setXValue(e.target.value)
+    }
+
+    // useEffect(callbackFn, dependencides(array))
+    // useEffect(Fn, []) => componentDidMount
+
+    //  It goes crazy and executes at each update (render)
+    // useEffect(() => {
+    //     console.log('TEST')
+    // })
+
+    useEffect(() => {
+        console.log("value = ", value)
+    }, [value])
+
+    useEffect(() => {
+        console.log("xValue =", xValue)
+    }, [xValue])
 
     return (
         <div>
-            <AnotherComp />
+            {/* <AnotherComp /> */}
             <input
                 key="1"
                 type="text"
@@ -45,13 +59,13 @@ const InputComp = (props) => {
                 value={value}
                 onChange={changeHandler}
             />
-
-            {/* <input
+            <input
                 key="2"
                 type="text"
-                value={value}
-                onChange={secondChangeHandler}
-            /> */}
+                placeholder={pHolder}
+                value={xValue}
+                onChange={handleXChange}
+            />
         </div>
     )
 }
