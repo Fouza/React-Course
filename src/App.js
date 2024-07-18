@@ -1,14 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import TextComp from './components/TextComp';
-import InputComp from './components/InputComp';
+import InputComp, { AnotherComp, TestComp } from './components/InputComp';
+
 
 function App() {
+  const x = "Any text"
   return (
     <div>
-      <TextComp title={"MarketPlace"} color="#565463" size={12} margin="40px 40px" />
-      <InputComp initialValue="This is the App" ph="My placeholder" />
-      <TextComp title="MarketPlace" color="#feeeec" />
+      {/* <TextComp title="Welcome Page" bgcolor="red" textColor="#000" />*/}
+      <TextComp title="Settings Page" bgcolor="#4f556f" textColor="#FFF" />
+      {/* <InputComp pHolder="Welcome placeholder" initialValue="TEST" /> */}
+      <AnotherComp />
     </div>
   );
 }
