@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+}
+
+.products {
+  flex: 1;
+}
+
+.panier {
+  flex: 2;
+  padding-left: 16px;
+  border-left: 2px solid #ccc;
+}
+
+.panier_product {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  padding: 20px;
+}

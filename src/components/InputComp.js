@@ -33,13 +33,19 @@ const InputComp = (props) => {
         setXValue(e.target.value)
     }
 
-    // useEffect(callbackFn, dependencides(array))
-    // useEffect(Fn, []) => componentDidMount
+    //SYNTAX:  useEffect(callbackFn, dependencides(array))
 
-    //  It goes crazy and executes at each update (render)
+    //1.
+    // useEffect(Fn, []) => if dep array empty => componentDidMount => Meaning: triggers only at first when the component mounts
+
+    //2.
+    //  useEffect(Fn) => No Dep => ComponentDidUpdate but for all kinds of changes => Meaning: It goes crazy and executes at each update of props/state
     // useEffect(() => {
     //     console.log('TEST')
     // })
+
+    //3.
+    // useEffect(Fn, [...dep]) => Have dependencies => ComponentDidUpdate but only if the specific values in the dep array changes
 
     useEffect(() => {
         console.log("value = ", value)
