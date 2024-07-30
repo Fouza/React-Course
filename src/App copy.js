@@ -16,7 +16,7 @@ function App() {
       alert("Product Sold Out")
     }
   }
-  console.log(panier)
+
   const removeFromCard = (name) => {
     setPanier(prev => {
       const index = prev.findIndex(el => el.name === name)
