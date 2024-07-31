@@ -1,0 +1,28 @@
+$weights: (
+    medium: $medium,
+    regular: $regular,
+    bold: $bold
+);
+
+@each $name, $weight in $weights {
+    .fw-#{$name} {
+        font-weight: $weight !important;
+    }
+}
+
+$fonts-sizes: (
+    xxl: $size-48,
+    xl: $size-40,
+    lg: $size-32,
+    md: $size-24,
+    sm: $size-18,
+    regular: $size-16,
+    xs: $size-14,
+    xxs: $size-12
+);
+
+@each $name, $size in $fonts-sizes {
+    .fs-#{$name} {
+        font-size: $size !important;
+    }
+}

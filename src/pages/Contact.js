@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, Fragment } from 'react'
 
 const Contact = () => {
     const [products, setProducts] = useState()
     console.log('contact')
     return (
-        <div>COOOOOONTACT</div>
+        <Fragment>
+            <div>COOOOOONTACT</div>
+            <button class="btn fs-md">Go to nowhere</button>
+        </Fragment>
     )
 }
 export default Contact

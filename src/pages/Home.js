@@ -3,7 +3,7 @@ import axios from 'axios'
 import CONFIG from '../config.json'
 import { faSpinner, faClock } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './global.css'
+import './global.scss'
 
 //To use fontawesome icons do this in terminal :
 //npm i @fortawesome/react-fontawesome
@@ -17,9 +17,11 @@ class Home extends React.Component {
         super(props)
         this.state = {
             products: [],
+            user: null,
             error: null
         }
         this.getProducts = this.getProducts.bind(this)
+        this.createUser = this.createUser.bind(this)
     }
 
 
@@ -32,7 +34,6 @@ class Home extends React.Component {
             // setTimeout(async () => { // Set Time Out just to demonstrate the loading
             await axios.get(`${CONFIG.api_server}/api/product/prod?price=${25}`)
                 .then(response => {
-                    console.log(response)
                     if (response.data.status === 200) {
                         this.setState({ products: response.data.products })
                     } else {
@@ -47,13 +48,35 @@ class Home extends React.Component {
         }
     }
 
+    async createUser() {
+        //Dummy Data / Test Data
+        const user = {
+            username: 'seif',
+            age: '22',
+            email: 's3if@s.com',
+        }
+        await axios.post(`${CONFIG.api_server}/api/user/add_user`, user)
+            .then(response => {
+                console.log(response)
+                if (response.data.status === 200) {
+                    this.setState({ user: response.data.user })
+                } else {
+                    this.setState({ error: response.data.message })
+                }
+            })
+
+    }
 
 
     render() {
-        const { products, error } = this.state
+        const { products, user, error } = this.state
+
         return (
             <div>
                 <h2>Hoooome</h2>
+                <button className='btn' onClick={() => this.createUser()}>CREATE USER</button>
+
+                {!!user ? <p>{user.username}</p> : <p>Not Yet Created</p>}
 
                 {products && products.length > 0 ?
                     <ul>

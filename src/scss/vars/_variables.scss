@@ -1,0 +1,103 @@
+// colours
+// https://app.zeplin.io/project/5eeb415dd5fe602b1c7b16cc/screen/5ef2206c4a67604b5b3cd9ed
+$black: #1a1a1a;
+$dark-indigo: #250e58;
+$darkest-teal: #062D3A;
+$dark-teal: #154859;
+$darkest-grey: #242933;
+$dark-grey: #495057;
+$mid-grey: #6B757D;
+$light-grey: #cccccc;
+$lightest-grey: #dddddd;
+$grey: #999999;
+$link-grey: $lightest-grey;
+$bg-grey: #f5f5f5;
+$white: #ffffff;
+$light-teal: #e8f5f7;
+$teal: #00A0AC;
+$btn-teal: $teal;
+$mid-teal: #00838D;
+$link-light: #3ebfc9;
+$link-dark: $mid-teal;
+$stale: #b8b8b8;
+$red: #cc0018;
+$mid-red: #BC2625;
+$light-red: #D9534F;
+$lightest-red: #EC5958;
+$amber: #DB6D08;
+$orange: #DC7707;
+$green: #35934B;
+$light-green: #a6af44;
+$outline: #66a0ebb3;
+$info-tag-border: #d6e9e9;
+$info-tag-background: #f0f9f9;
+$yellow: #ffc600;
+$no-activity-grey: #ebebeb;
+$usa-blue: #05026E;
+// party badge colours
+$rangewell: #00c6aa;
+$borrower: #008bdf;
+$introducer: #54098e;
+$lender: #b004a0;
+$five-alive: #6925ff;
+$advisor: #6925ff;
+$referral: $yellow;
+$required: #59A3AD;
+$purple: #250E58;
+$property: #A1231F;
+// note colours
+$note: #fffcde;
+$note-controls: #fffaad;
+$note-icon: #50b1b8;
+
+// timeline colours
+$red-bubble: #fee7ea;
+$blue-bubble: #f5fafa;
+
+// lenders
+$lender-card: #d8d8d8;
+
+// dashboard
+$gradient-start: #174d5e;
+$gradient-stop: #84a8b4;
+
+//anomalies
+$green-highlight: rgba(53, 147, 75, 0.07999999821186066);
+$red-highlight: rgba(204, 0, 24, 0.0812118);
+$amber-highlight: rgba(219, 109, 8, 0.1);
+
+//transparent
+$transparent: transparent;
+
+
+// font sizes
+// https://app.zeplin.io/project/5eeb415dd5fe602b1c7b16cc/screen/5ef2206cefab124620c2e1d2
+$size-48: 48px;
+$size-40: 40px;
+$size-32: 32px;
+$size-24: 24px;
+$size-20: 20px;
+$size-18: 18px;
+$size-16: 16px;
+$size-14: 14px;
+$size-12: 12px;
+
+$h1: $size-48;
+$h2: $size-40;
+$h3: $size-32;
+$h4: $size-24;
+$h5: $size-18;
+$h6: $size-16;
+
+$section-hdr: $size-24;
+$card-hdr: $size-18;
+$intro-text: $size-18;
+$body: $size-16;
+$labels: $size-14;
+$subtitle: $size-12;
+
+// font weights
+// https://app.zeplin.io/project/5eeb415dd5fe602b1c7b16cc/screen/5ef2206cefab124620c2e1d2
+$regular: 400;
+$medium: 500;
+$bold: 700;

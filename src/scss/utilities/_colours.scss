@@ -1,0 +1,51 @@
+@import "../vars/_variables.scss";
+
+$colors: (
+    dark-indigo: $dark-indigo,
+    darkest-teal: $darkest-teal,
+    dark-teal: $dark-teal,
+    darkest-grey: $darkest-grey,
+    dark-grey: $dark-grey,
+    mid-grey: $mid-grey,
+    light-grey: $light-grey,
+    lightest-grey: $link-grey,
+    bg-grey: $bg-grey,
+    white: $white,
+    btn-teal: $btn-teal,
+    teal: $btn-teal,
+    mid-teal: $mid-teal,
+    link-dark: $link-dark,
+    link-light: $link-light,
+    black:$black,
+    red: $red,
+    amber: $amber,
+    orange: $orange,
+    green: $green,
+    outline: $outline,
+    yellow: $yellow,
+    borrower: $borrower,
+    introducer: $introducer,
+    lender: $lender,
+    five-alive: $five-alive,
+    usa-blue: $usa-blue,
+    note-icon: $note-icon,
+    mid-red: $mid-red,
+    light-red: $light-red,
+    lightest-red: $lightest-red,
+    grey: $grey,
+    required: $required,
+    transparent: $transparent,
+    purple: $purple,
+    property: $property
+);
+
+@each $class,
+$color in $colors {
+    .fg-#{$class} {
+        color: $color !important;
+    }
+
+    .bg-#{$class} {
+        background-color: $color !important;
+    }
+}
