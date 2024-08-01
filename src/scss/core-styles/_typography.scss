@@ -4,9 +4,21 @@ $weights: (
     bold: $bold
 );
 
-@each $name, $weight in $weights {
-    .fw-#{$name} {
-        font-weight: $weight !important;
+.fw-medium {
+    font-weight: $medium;
+}
+
+.fw-regular {
+    font-weight: $regular;
+}
+
+.fw-bold {
+    font-weight: $bold;
+}
+
+@each $x, $y in $weights {
+    .fw-#{$x} {
+        font-weight: $y !important;
     }
 }
 

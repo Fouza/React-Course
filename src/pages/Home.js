@@ -17,11 +17,13 @@ class Home extends React.Component {
         super(props)
         this.state = {
             products: [],
-            user: null,
+            user: {},
             error: null
         }
         this.getProducts = this.getProducts.bind(this)
         this.createUser = this.createUser.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
 
@@ -67,13 +69,37 @@ class Home extends React.Component {
 
     }
 
+    handleChange(name, value) {
+        this.setState({
+            user: {
+                ...this.state.user,
+                [name]: value
+            }
+        })
+    }
+
+    async handleSubmit() {
+        await axios.post(`${CONFIG.api_server}/api/user/add_user`, this.state.user).then(response => {
+            console.log(response)
+        })
+    }
 
     render() {
         const { products, user, error } = this.state
-
+        console.log(user)
         return (
             <div>
                 <h2>Hoooome</h2>
+
+                <form>
+                    <input name="username" onChange={(e) => this.handleChange("username", e.target.value)} />
+                    <input name="age" onChange={(e) => this.handleChange("age", e.target.value)} />
+                    <input name="email" onChange={(e) => this.handleChange("email", e.target.value)} />
+
+
+                    <button onClick={this.handleSubmit}>Submit</button>
+                </form>
+
                 <button className='btn' onClick={() => this.createUser()}>CREATE USER</button>
 
                 {!!user ? <p>{user.username}</p> : <p>Not Yet Created</p>}
